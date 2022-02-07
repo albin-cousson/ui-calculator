@@ -1,0 +1,49 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+ 
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+  <p *ngIf="chiffre !== ''">{{chiffre}}</p>
+  <p *ngIf="signe !== ''">{{signe}}</p>
+  <p *ngIf="showResultat !== false">{{calcul}}</p>
+  <div class="container-fluid">
+    <div class="row">
+      <div (click)="show(ac.textContent)" class="col-3 second d-flex ion-justify-content-center ion-align-items-center" #ac>AC</div>
+      <div (click)="show(plusEtmoins.textContent)" class="col-3 second d-flex ion-justify-content-center ion-align-items-center" #plusEtmoins>+/-</div>
+      <div (click)="show(pourcent.textContent)" class="col-3 second d-flex ion-justify-content-center ion-align-items-center" #pourcent>%</div>
+      <div (click)="showSigne(division.textContent)" class="col-3 second d-flex ion-justify-content-center ion-align-items-center" #division>÷</div>
+    </div>
+    <div class="row">
+      <div (click)="showNumber(sept.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #sept>7</div>
+      <div (click)="showNumber(huit.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #huit>8</div>
+      <div (click)="showNumber(neuf.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #neuf>9</div>
+      <div (click)="showSigne(fois.textContent)" class="col-3 third d-flex ion-justify-content-center ion-align-items-center" #fois>x</div>
+    </div>
+    <div class="row">
+      <div (click)="showNumber(quatre.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #quatre>4</div>
+      <div (click)="showNumber(cinq.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #cinq>5</div>
+      <div (click)="showNumber(six.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #six>6</div>
+      <div (click)="showSigne(moins.textContent)" class="col-3 third d-flex ion-justify-content-center ion-align-items-center" #moins>-</div>
+    </div>
+    <div class="row">
+      <div (click)="showNumber(un.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #un>1</div>
+      <div (click)="showNumber(deux.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #deux>2</div>
+      <div (click)="showNumber(trois.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #trois>3</div>
+      <div (click)="showSigne(plus.textContent)" class="col-3 third d-flex ion-justify-content-center ion-align-items-center" #plus>+</div>
+    </div>
+    <div class="row">
+      <div (click)="showNumber(zero.textContent)" class="col-6 first d-flex ion-justify-content-center ion-align-items-center" #zero>0</div>
+      <div (click)="show(virgule.textContent)" class="col-3 first d-flex ion-justify-content-center ion-align-items-center" #virgule>,</div>
+      <div (click)="showCalcul(egale.textContent)" class="col-3 third d-flex ion-justify-content-center ion-align-items-center" #egale>=</div>
+    </div>
+  </div>
+</ion-content>

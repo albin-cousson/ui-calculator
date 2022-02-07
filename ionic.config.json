@@ -1,0 +1,7 @@
+{
+  "name": "ui-calculator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
